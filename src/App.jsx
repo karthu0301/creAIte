@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { 
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider
+} from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+import MainLayout from './components/MainLayout'
+import ProfilePage from './pages/ProfilePage'
+import InsightsPage from './pages/InsightsPage';
+import IdeationPage from './pages/IdeationPage';
+import SchedulePage from './pages/SchedulePage';
+import EditPage from './pages/EditPage';
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path='/' element={<MainLayout />}>
+   <Route index element={<ProfilePage />} />
+   <Route path='/insights' element={<InsightsPage />} />
+   <Route path='/ideation' element={<IdeationPage />} />
+   <Route path='schedule' element={<SchedulePage />} />
+   <Route path='/edit' element={<EditPage />} />
+  </Route>
   )
-}
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App
