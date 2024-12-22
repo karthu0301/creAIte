@@ -128,90 +128,92 @@ const EditPage = () => {
         </ul>
       </aside>
 
-    <div className="main">
-      <div className="main-content">
-        <h1>Edit Project</h1>
-        <div className="video-preview">
-          <ReactPlayer
-            url={videoUrl}
-            controls
-            width="100%"
-            playbackRate={playbackRate}
-            muted={isMuted}
-          />
-        </div>
-        <div className="video-tools">
-          <div className="caption-tools">
-            <h3>Closed Caption Text</h3>
-            <textarea placeholder="Enter caption text..."></textarea>
-            <button onClick={handleAddCaption}>Add Caption</button>
-            <ul>
-              {captions.map((caption, index) => (
-                <li key={index}>
-                  {caption.start} - {caption.end}: {caption.text}
-                </li>
-              ))}
-            </ul>
+      <div className="main">
+        <div className="sub-main">
+          <div className="main-content">
+            <h1>Edit Project</h1>
+            <div className="video-preview">
+              <ReactPlayer
+                url={videoUrl}
+                controls
+                width="100%"
+                playbackRate={playbackRate}
+                muted={isMuted}
+              />
+            </div>
+            <div className="video-tools">
+              <div className="caption-tools">
+                <h3>Closed Caption Text</h3>
+                <textarea placeholder="Enter caption text..."></textarea>
+                <button onClick={handleAddCaption}>Add Caption</button>
+                <ul>
+                  {captions.map((caption, index) => (
+                    <li key={index}>
+                      {caption.start} - {caption.end}: {caption.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="suggestions">
+                <h3>AI Suggestions</h3>
+                <p>{suggestions}</p>
+              </div>
+              <div className="trim-tools">
+                <h3>Trim Video</h3>
+                <input
+                  type="text"
+                  placeholder="Start time (e.g., 00:00:10)"
+                  value={trimStart}
+                  onChange={(e) => setTrimStart(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="End time (e.g., 00:00:20)"
+                  value={trimEnd}
+                  onChange={(e) => setTrimEnd(e.target.value)}
+                />
+                <button onClick={handleTrimVideo}>Trim</button>
+              </div>
+              <div className="filter-tools">
+                <h3>Filters</h3>
+                <button onClick={() => handleApplyFilter("hue=s=0")}>
+                  Grayscale
+                </button>
+                <button onClick={() => handleApplyFilter("hue=s=1.5")}>
+                  Brighten
+                </button>
+              </div>
+              <div className="playback-tools">
+                <h3>Playback Speed</h3>
+                <button onClick={() => handlePlaybackSpeed(0.5)}>0.5x</button>
+                <button onClick={() => handlePlaybackSpeed(1)}>1x</button>
+                <button onClick={() => handlePlaybackSpeed(1.5)}>1.5x</button>
+                <button onClick={() => handlePlaybackSpeed(2)}>2x</button>
+              </div>
+              <div className="audio-tools">
+                <h3>Audio</h3>
+                <button onClick={handleMuteToggle}>
+                  {isMuted ? "Unmute" : "Mute"}
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="suggestions">
-            <h3>AI Suggestions</h3>
-            <p>{suggestions}</p>
-          </div>
-          <div className="trim-tools">
-            <h3>Trim Video</h3>
-            <input
-              type="text"
-              placeholder="Start time (e.g., 00:00:10)"
-              value={trimStart}
-              onChange={(e) => setTrimStart(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="End time (e.g., 00:00:20)"
-              value={trimEnd}
-              onChange={(e) => setTrimEnd(e.target.value)}
-            />
-            <button onClick={handleTrimVideo}>Trim</button>
-          </div>
-          <div className="filter-tools">
-            <h3>Filters</h3>
-            <button onClick={() => handleApplyFilter("hue=s=0")}>
-              Grayscale
-            </button>
-            <button onClick={() => handleApplyFilter("hue=s=1.5")}>
-              Brighten
-            </button>
-          </div>
-          <div className="playback-tools">
-            <h3>Playback Speed</h3>
-            <button onClick={() => handlePlaybackSpeed(0.5)}>0.5x</button>
-            <button onClick={() => handlePlaybackSpeed(1)}>1x</button>
-            <button onClick={() => handlePlaybackSpeed(1.5)}>1.5x</button>
-            <button onClick={() => handlePlaybackSpeed(2)}>2x</button>
-          </div>
-          <div className="audio-tools">
-            <h3>Audio</h3>
-            <button onClick={handleMuteToggle}>
-              {isMuted ? "Unmute" : "Mute"}
-            </button>
+          <div className="bottom-panel">
+            <div className="bottom-panel-item">
+              <h3>Content Checklist</h3>
+              <p>Add captions and review visuals to ensure quality content.</p>
+            </div>
+            <div className="bottom-panel-item">
+              <h3>Version Control & History</h3>
+              <p>Save, view, or revert to previous versions of the selected project.</p>
+            </div>
+            <div className="bottom-panel-item">
+              <h3>Collaboration</h3>
+              <p>Invite team members to comment and approve your edits.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bottom-panel">
-          <div className="bottom-panel-item">
-            <h3>Content Checklist</h3>
-            <p>Add captions and review visuals to ensure quality content.</p>
-          </div>
-          <div className="bottom-panel-item">
-            <h3>Version Control & History</h3>
-            <p>Save, view, or revert to previous versions of the selected project.</p>
-          </div>
-          <div className="bottom-panel-item">
-            <h3>Collaboration</h3>
-            <p>Invite team members to comment and approve your edits.</p>
-          </div>
-        </div>
-        </div>
     </div>
   );
 };

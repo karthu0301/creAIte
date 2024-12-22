@@ -6,7 +6,7 @@
     width: 100vw;  /* Full width */
     overflow-y: auto; /* Enable scrolling for overflow content */
     align-items: stretch; /* Ensures both panels align vertically */
-    padding-top: 4%;
+    padding-top: 0%;
     padding-bottom: 5%;
 }
   
@@ -36,6 +36,10 @@
     font-size: small;
 }
 
+.suggestButt:hover {
+    background-color: gray;
+}
+
 .promptBox3 {
     position: relative;
     width: 100%;
@@ -53,6 +57,10 @@
     position: relative;
     background-color: #222222;
     color:aliceblue;
+}
+
+.generateButton2:hover {
+    background-color: gray;
 }
   
 /* Right Panel */
@@ -94,6 +102,10 @@
     color:aliceblue;
 }
 
+.saveButton:hover {
+    background-color: gray;
+}
+
 /* Input Options Section (Bottom of the Right Panel) */
 .inputOptions {
     flex: 1;
@@ -131,6 +143,10 @@
     position: relative;
     background-color: #222222;
     color:aliceblue;
+}
+
+.generateButton:hover {
+    background-color: gray;
 }
 
 /* Platform (platform & format section) */
@@ -195,6 +211,10 @@
     position: relative;
     background-color: #222222;
     color:aliceblue;
+}
+
+.tag:hover {
+    background-color: gray;
 }
 
 /* Image inside Visualizer */

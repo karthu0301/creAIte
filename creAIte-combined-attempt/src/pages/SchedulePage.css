@@ -6,16 +6,22 @@
     font-family: Arial, sans-serif;
   }
   
-  .left-panel,
+  .left-panel {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 30%;
+  }
   .right-panel {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    background-color: #f9f9f9;
+    overflow-y: auto;
   }
   
   .left-panel {
     background-color: #f9f9f9;
-    border-right: 1px solid #ddd;
+    border-right: 5px solid #ddd;
   }
   
   .left-panel h2 {
@@ -41,7 +47,7 @@
   
   .left-panel form button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #222222;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -50,7 +56,7 @@
   }
   
   .left-panel form button:hover {
-    background-color: #0056b3;
+    background-color: gray;
   }
   
   .right-panel h2 {
@@ -101,14 +107,23 @@
     padding: 5px 10px;
     margin-right: 10px;
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    background-color: #222222;
     cursor: pointer;
     border-radius: 5px;
+    color:white;
   }
   
   .priority-tags button:hover {
-    background-color: #007bff;
+    background-color: gray;
     color: #fff;
+  }
+
+  .priority-panel select {
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+    border-radius: 5px;
   }
   
   .team-member {
