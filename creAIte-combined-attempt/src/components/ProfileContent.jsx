@@ -52,8 +52,8 @@ const ProfileContent = () => {
       </section>
 
       <section className="analytics-section">
-        <h2 className="section-title">Top Performing Projects</h2>
         <div className="analytics-grid">
+          <h2 className="section-title">Top Performing Projects</h2>
           <div className="analytics-card">
             <img
               src="https://via.placeholder.com/200x150"
@@ -66,8 +66,8 @@ const ProfileContent = () => {
           </div>
         </div>
 
-        <h2 className="section-title">Pinned Projects</h2>
         <div className="analytics-grid">
+          <h2 className="section-title">Pinned Projects</h2>
           <div className="analytics-card">
             <img
               src="https://via.placeholder.com/200x150"
@@ -80,8 +80,8 @@ const ProfileContent = () => {
           </div>
         </div>
 
-        <h2 className="section-title">Content Analytics Summary</h2>
         <div className="analytics-grid">
+          <h2 className="section-title">Content Analytics Summary</h2>
           <div className="analytics-card">
             <img
               src="https://via.placeholder.com/200x150"

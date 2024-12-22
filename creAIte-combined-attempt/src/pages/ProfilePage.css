@@ -1,6 +1,7 @@
 /* Profile Page */
 .profile-page {
   padding: 32px;
+  padding-top: 450px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -104,23 +105,27 @@
   margin-top: 32px;
   margin-bottom: 32px;
   display: flex; /* Stack section titles and grids vertically */
-  gap: 24px; /* Add spacing between sections */
-}
-
-.analytics-section .section-title {
-  display:flex;
   flex-direction: row;
+  gap: 25px; /* Add spacing between sections */
+  width: 100%;
 }
 
 .analytics-grid {
   display: flex; /* Flexbox for horizontal alignment */
-  flex-direction: row; /* Ensure children are laid out in a row */
+  flex-direction: column; /* Ensure children are laid out in a row */
   justify-content: space-between; /* Distribute space between cards */
   align-items: stretch; /* Ensure all cards have the same height */
-  gap: 16px; /* Add spacing between cards */
+  gap: 10px; /* Add spacing between cards */
   width: 100%; /* Allow the grid to take the full container width */
   max-width: 1200px; /* Add a max width to center-align */
   margin: 0 auto; /* Center the grid on the page */
+}
+
+.analytics-grid .section-title {
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
 }
 
 .analytics-card {
@@ -128,7 +133,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Align content to the top */
-  width: 30%; /* Adjust width to fit three cards evenly */
+  width: 100%; /* Adjust width to fit three cards evenly */
   max-width: 300px; /* Add a max width for consistency */
   padding: 16px;
   border: 1px solid #d9d9d9;
