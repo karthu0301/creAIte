@@ -1,6 +1,14 @@
 import React from "react";
 import "../pages/ProfilePage.css";
 import { Link } from "react-router-dom";
+import pic from "../assets/profilePic.png";
+import frame from "../assets/frame.png";
+import tales from "../assets/tales.png";
+import analytics from "../assets/analytics.png";
+import horizons from "../assets/horizons.png";
+import ink from "../assets/ink.png";
+import insights from "../assets/insights.png";
+
 
 const ProfileContent = () => {
   return (
@@ -8,11 +16,7 @@ const ProfileContent = () => {
       {/* Profile Information */}
       <section className="profile-info">
         <div className="profile-picture">
-          <img
-            src="https://via.placeholder.com/128x128"
-            alt="Profile"
-            className="profile-img"
-          />
+          <img src={pic} alt="Profile" className="profile-img" />
           <button className="edit-profile-button">Edit profile image</button>
         </div>
         <div className="profile-details">
@@ -43,7 +47,7 @@ const ProfileContent = () => {
           <Link to="/insights">
             <p>Insights</p>
             <img
-              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdatavizproject.com%2Fdata-type%2Fbar-chart%2F&psig=AOvVaw1yz3JSWoMRMepEsRBY9rnI&ust=1734877448098000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJi2k6KIuYoDFQAAAAAdAAAAABAE"
+              src= {insights}
               alt="Insights"
               className="insights-img"
             />
@@ -56,10 +60,11 @@ const ProfileContent = () => {
           <h2 className="section-title">Top Performing Projects</h2>
           <div className="analytics-card">
             <img
-              src="https://via.placeholder.com/200x150"
+              src= {frame}
               alt="Top Performing"
               className="analytics-img"
             />
+            <h3 className="project-title">Frames of Impact </h3>
             <p className="analytics-description">
               Stories That Inspire. Actions That Transform.
             </p>
@@ -70,10 +75,11 @@ const ProfileContent = () => {
           <h2 className="section-title">Pinned Projects</h2>
           <div className="analytics-card">
             <img
-              src="https://via.placeholder.com/200x150"
+              src= {tales}
               alt="Pinned Projects"
               className="analytics-img"
             />
+            <h3 className="project-title">Vivid Tales</h3>
             <p className="analytics-description">
               From Doubt to Dream: My Journey as a Creator.
             </p>
@@ -84,17 +90,17 @@ const ProfileContent = () => {
           <h2 className="section-title">Content Analytics Summary</h2>
           <div className="analytics-card">
             <img
-              src="https://via.placeholder.com/200x150"
+              src= {analytics}
               alt="Content Analytics"
               className="analytics-img"
             />
+            <h3 className="project-title">Engagement Insights</h3>
             <p className="analytics-description">
               Creator Milestones: Top Performing Project of the Month.
             </p>
           </div>
         </div>
       </section>
-
 
       {/* Past Projects Section */}
       <section className="projects-section">
@@ -103,7 +109,7 @@ const ProfileContent = () => {
           {/* Project Card 1 */}
           <div className="project-card">
             <img
-              src="https://via.placeholder.com/160x160"
+              src= {horizons}
               alt="Project"
               className="project-img"
             />
@@ -118,7 +124,7 @@ const ProfileContent = () => {
           {/* Project Card 2 */}
           <div className="project-card">
             <img
-              src="https://via.placeholder.com/160x160"
+              src= {ink}
               alt="Project"
               className="project-img"
             />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './IdeationPage.css'; 
+import visualiser from "../assets/visualiser.png";
 
 const Dropdown = () => {
   const [selected, setSelected] = useState("");
@@ -68,7 +69,7 @@ const SplitScreen = () => {
           <h2>Content Visualizer</h2>
           <div className="visualizer">
             <img
-              src="src/assets/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+              src= {visualiser}
               alt="Visualizer"
               className="image"
             />
