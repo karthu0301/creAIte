@@ -1,0 +1,161 @@
+
+
+.schedule-page {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .left-panel,
+  .right-panel {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-panel {
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+  }
+  
+  .left-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .left-panel form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .left-panel form input,
+  .left-panel form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .left-panel form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .left-panel form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .right-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .gantt-chart .task-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .task-row .task-name {
+    flex: 1;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .task-bar {
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  .task-bar-red {
+    background-color: #ff4d4d;
+  }
+  
+  .task-bar-orange {
+    background-color: #ffa500;
+  }
+  
+  .task-bar-green {
+    background-color: #28a745;
+  }
+  
+  .task-bar-blue {
+    background-color: #007bff;
+  }
+  
+  .priority-panel h3,
+  .team-progress h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .priority-tags button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .priority-tags button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .team-member span {
+    width: 30px;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    flex: 1;
+    height: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+  
+  .progress-bar-red {
+    background-color: #ff4d4d;
+  }
+  
+  .progress-bar-green {
+    background-color: #28a745;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .footer button:hover {
+    text-decoration: underline;
+  }
